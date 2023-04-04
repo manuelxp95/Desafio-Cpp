@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="App">
+      <UniqueIdentifier>{7cddd992-585d-4eb7-b1c0-2c64966f0dac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="View">
+      <UniqueIdentifier>{f2ea5555-36fa-4c86-b488-ce87d1f53762}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="View\IView">
+      <UniqueIdentifier>{78ecd7f7-c951-4d7c-b686-27ee6232a78a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="View\View Class">
+      <UniqueIdentifier>{831e5c0e-ced9-4f03-9a48-71627737d0c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Presenter">
+      <UniqueIdentifier>{6fcca5e4-2ada-4948-8b91-aee73e867d41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Presenter\Presenter Class">
+      <UniqueIdentifier>{f17e43c2-34b8-4ea6-b102-0cc03c941cfa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain">
+      <UniqueIdentifier>{5f9d8078-6514-4969-8ed7-004e2390a004}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain\Cotizador">
+      <UniqueIdentifier>{329c3b27-362b-4daf-be65-15d9b3db4a5a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>App</Filter>
+    </ClCompile>
+    <ClCompile Include="View.cpp">
+      <Filter>View\View Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Presenter.cpp">
+      <Filter>Presenter\Presenter Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Cotizador.cpp">
+      <Filter>Domain\Cotizador</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="IView.h">
+      <Filter>View\IView</Filter>
+    </ClInclude>
+    <ClInclude Include="View.h">
+      <Filter>View\View Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Presenter.h">
+      <Filter>Presenter\Presenter Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Cotizador.h">
+      <Filter>Domain\Cotizador</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

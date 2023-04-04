@@ -1,0 +1,5 @@
+﻿  Main.cpp
+  View.cpp
+C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\View.cpp(17,35): error C2027: uso del tipo 'Presenter' sin definir
+C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\View.h(8,7): message : vea la declaración de 'Presenter'
+  Generando código...
