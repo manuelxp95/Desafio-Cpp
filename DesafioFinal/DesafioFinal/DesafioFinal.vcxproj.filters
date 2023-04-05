@@ -25,6 +25,21 @@
     <Filter Include="Domain\Cotizador">
       <UniqueIdentifier>{329c3b27-362b-4daf-be65-15d9b3db4a5a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Domain\Prendas">
+      <UniqueIdentifier>{b0837871-aeee-40dd-ac07-e6480734346f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain\Prendas\Factory">
+      <UniqueIdentifier>{e468908e-f1d8-41bd-9ff7-7e7683c1051d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain\Prendas\Types">
+      <UniqueIdentifier>{d93dd9b4-6372-41f1-a04b-4c3a1ca3a319}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain\Prendas\Types\Camisa">
+      <UniqueIdentifier>{b4a1193b-99cf-466b-ac23-8f22ac67fc07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain\Prendas\Types\Pantalon">
+      <UniqueIdentifier>{d1ab5031-2e4b-4717-b064-badccd26335b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -39,6 +54,18 @@
     <ClCompile Include="Cotizador.cpp">
       <Filter>Domain\Cotizador</Filter>
     </ClCompile>
+    <ClCompile Include="Prenda.cpp">
+      <Filter>Domain\Prendas</Filter>
+    </ClCompile>
+    <ClCompile Include="PrendaFactory.cpp">
+      <Filter>Domain\Prendas\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="Camisa.cpp">
+      <Filter>Domain\Prendas\Types\Camisa</Filter>
+    </ClCompile>
+    <ClCompile Include="Pantalon.cpp">
+      <Filter>Domain\Prendas\Types\Pantalon</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IView.h">
@@ -52,6 +79,18 @@
     </ClInclude>
     <ClInclude Include="Cotizador.h">
       <Filter>Domain\Cotizador</Filter>
+    </ClInclude>
+    <ClInclude Include="Prenda.h">
+      <Filter>Domain\Prendas</Filter>
+    </ClInclude>
+    <ClInclude Include="PrendaFactory.h">
+      <Filter>Domain\Prendas\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="Camisa.h">
+      <Filter>Domain\Prendas\Types\Camisa</Filter>
+    </ClInclude>
+    <ClInclude Include="Pantalon.h">
+      <Filter>Domain\Prendas\Types\Pantalon</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

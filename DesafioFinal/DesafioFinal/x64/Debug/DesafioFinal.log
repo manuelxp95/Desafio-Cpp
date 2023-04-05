@@ -1,5 +1,29 @@
-﻿  Main.cpp
+﻿  Cotizador.cpp
+C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\Prenda.h(17,18): error C2065: 'PrendaType': identificador no declarado
+C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\Prenda.h(17,14): error C2923: 'std::map': 'PrendaType' no es un argumento de tipo plantilla válido para el parámetro '_Kty'
+C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\Prenda.h(17,18): message : vea la declaración de 'PrendaType'
+C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\Prenda.h(17,14): error C2976: "std::map": no hay suficientes argumentos de plantilla
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\map(73,1): message : vea la declaración de 'std::map'
+C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\Cotizador.cpp(5,52): error C2514: "std::map": no se puede construir una plantilla de clase
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\map(73,1): message : vea la declaración de 'std::map'
+C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\Cotizador.cpp(6,2): error C2065: 'm_view': identificador no declarado
+  Main.cpp
+  Prenda.cpp
+C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\Prenda.h(17,18): error C2065: 'PrendaType': identificador no declarado
+C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\Prenda.h(17,14): error C2923: 'std::map': 'PrendaType' no es un argumento de tipo plantilla válido para el parámetro '_Kty'
+C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\Prenda.h(17,18): message : vea la declaración de 'PrendaType'
+C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\Prenda.h(17,14): error C2976: "std::map": no hay suficientes argumentos de plantilla
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\map(73,1): message : vea la declaración de 'std::map'
+C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\Prenda.cpp(4,10): error C2065: 'PrendaType': identificador no declarado
+C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\Prenda.cpp(4,6): error C2923: 'std::map': 'PrendaType' no es un argumento de tipo plantilla válido para el parámetro '_Kty'
+C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\Prenda.cpp(4,10): message : vea la declaración de 'PrendaType'
+C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\Prenda.cpp(4,6): error C2976: "std::map": no hay suficientes argumentos de plantilla
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\map(73,1): message : vea la declaración de 'std::map'
+C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\Prenda.cpp(4,39): error C2079: 'Prenda::getConstants' utiliza class 'std::map' sin definir
+C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\Prenda.cpp(6,9): error C2653: 'WeaponFactory': no es un nombre de clase o espacio de nombres
+C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\Prenda.cpp(6,24): error C3861: 'getWeaponList': no se encontró el identificador
+  Presenter.cpp
+C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\Presenter.h(21,1): error C2143: error de sintaxis: falta ';' delante de '}'
   View.cpp
-C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\View.cpp(17,35): error C2027: uso del tipo 'Presenter' sin definir
-C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\View.h(8,7): message : vea la declaración de 'Presenter'
+C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\Presenter.h(21,1): error C2143: error de sintaxis: falta ';' delante de '}'
   Generando código...

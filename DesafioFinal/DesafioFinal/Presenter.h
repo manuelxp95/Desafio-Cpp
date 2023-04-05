@@ -2,20 +2,21 @@
 #define PRESENTER_H
 
 class IView;
-//class Soldier;
+class Cotizador;
 
 class Presenter
 {
 private:
 	IView* m_view = nullptr;
-	//Soldier* m_soldier = nullptr;
+	Cotizador* m_cotizador = nullptr;
 public:
 	explicit Presenter(IView* view);
-	~Presenter();
-	void pickupWeapon(int option);
-	void getListOfWeaponMenuItems();
-	void shoot();
-	void seeCurrentWeapon();
-	void dropCurrentWeapon();
+	//~Presenter();
+	//void pickupWeapon(int option);
+	//void getListOfWeaponMenuItems();
+	//void shoot();
+	//void seeCurrentWeapon();
+	//void dropCurrentWeapon();
+	void getListOfPrendas()
 };
 #endif //PRESENTER_H

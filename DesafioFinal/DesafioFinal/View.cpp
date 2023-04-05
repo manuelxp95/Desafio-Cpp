@@ -30,6 +30,21 @@ void View::showText(const std::string& text)
 }
 
 //---------------> Menus
+void View::showMenuCotizacion() {
+	std::string optionString = "";
+	bool isValidOption = true;
+	do {
+		std::system("cls");
+		showText("COTIZADOR EXPRES - COTIZAR");
+		showText("----------------------------------------------");
+		showText("Presiona 3 para volver al menu principal");
+		showText("----------------------------------------------");
+		showText("PASO 1: Selecciona la prenda a cotizar: ");
+		m_presenter->getListOfPrendas();
+	
+	} while (!isValidOption);
+}
+
 void View::showMainMenu()
 {
 	std::string option;
@@ -65,12 +80,13 @@ void View::runOption(const char* option, bool& exitCondition)
 
 	if (str_option == "1")
 	{
-		showMenuToTakeAWeapon();
+		//showMenuToTakeAWeapon();
 		exitCondition = false;
 	}
 	else if (str_option == "2")
 	{
-		m_presenter->dropCurrentWeapon();
+		showMenuCotizacion();
+		//m_presenter->dropCurrentWeapon();
 		std::cin.get();
 		exitCondition = false;
 	}
@@ -86,3 +102,4 @@ void View::runOption(const char* option, bool& exitCondition)
 		exitCondition = false;
 	}
 }
+

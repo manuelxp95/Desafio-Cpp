@@ -18,7 +18,7 @@ private:
 public:
 	View();
 	~View() override;
-	void showMenuToTakeAWeapon();
+	void showMenuCotizacion();
 	void selectWeapon(const char* option, bool& isValidOption);
 	void showText(const char* text) override;
 	void showText(const std::string& text) override;

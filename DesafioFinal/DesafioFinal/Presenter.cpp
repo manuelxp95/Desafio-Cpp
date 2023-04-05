@@ -1,8 +1,12 @@
 #include "Presenter.h"
 #include "IView.h"
-//#include "Soldier.h"
+#include "Cotizador.h"
 //#include "Weapon.h"
 
-Presenter::Presenter(IView* view) : m_view(view), m_soldier(new Soldier())
+Presenter::Presenter(IView* view) : m_view(view), m_cotizador(new Cotizador())
 {
+}
+
+void Presenter::getListOfPrendas() {
+
 }

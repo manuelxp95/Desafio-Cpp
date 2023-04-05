@@ -127,14 +127,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Camisa.cpp" />
     <ClCompile Include="Cotizador.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Pantalon.cpp" />
+    <ClCompile Include="Prenda.cpp" />
+    <ClCompile Include="PrendaFactory.cpp" />
     <ClCompile Include="Presenter.cpp" />
     <ClCompile Include="View.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Camisa.h" />
     <ClInclude Include="Cotizador.h" />
     <ClInclude Include="IView.h" />
+    <ClInclude Include="Pantalon.h" />
+    <ClInclude Include="Prenda.h" />
+    <ClInclude Include="PrendaFactory.h" />
     <ClInclude Include="Presenter.h" />
     <ClInclude Include="View.h" />
   </ItemGroup>
