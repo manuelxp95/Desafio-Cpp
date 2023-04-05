@@ -12,11 +12,11 @@ private:
 public:
 	explicit Presenter(IView* view);
 	//~Presenter();
-	//void pickupWeapon(int option);
+	void pickupPrenda(int option);
 	//void getListOfWeaponMenuItems();
 	//void shoot();
 	//void seeCurrentWeapon();
 	//void dropCurrentWeapon();
-	void getListOfPrendas()
+	void getListOfPrendas();
 };
 #endif //PRESENTER_H

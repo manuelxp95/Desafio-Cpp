@@ -1,9 +1,9 @@
 #include "Prenda.h"
-//#include "PrendaFactory.h"
+#include "PrendaFactory.h"
 
 std::map<PrendaType, Prenda*> Prenda::getConstants()
 {
-	return WeaponFactory::getWeaponList();
+	return PrendaFactory::getPrendaList();
 }
 
 const char* Prenda::getName() const

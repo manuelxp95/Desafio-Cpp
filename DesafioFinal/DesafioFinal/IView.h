@@ -3,8 +3,8 @@
 #include <map>
 #include <string>
 
-class Prendas;
-enum class PrendasTipo;
+class Prenda;
+enum class PrendaType;
 
 class IView
 {
@@ -12,6 +12,6 @@ public:
 	virtual ~IView() = default;
 	virtual void showText(const char* text) = 0;
 	virtual void showText(const std::string& text) = 0;
-	//virtual void setWeaponMenuItems(const std::map<WeaponType, Weapon*>& items) = 0;
+	virtual void setPrendaMenuItem(const std::map<PrendaType, Prenda*>& items) = 0;
 };
 #endif // IVIEW_H

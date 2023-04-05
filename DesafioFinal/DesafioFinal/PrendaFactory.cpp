@@ -21,8 +21,7 @@ std::map<PrendaType, Prenda*> PrendaFactory::getPrendaList()
 	auto pantalon= new Pantalon();
 
 	return std::map<PrendaType, Prenda*> {
-		{ PrendaType::Revolver, revolver},
-		{ PrendaType::Rifle,    rifle },
-		{ PrendaType::Shotgun,  shotgun },
+		{ PrendaType::Camisa, camisa},
+		{ PrendaType::Pantalon, pantalon}
 	};
 }

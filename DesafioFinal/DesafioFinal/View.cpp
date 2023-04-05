@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include "View.h"
 #include "Presenter.h"
+#include "Prenda.h"
 #include <algorithm>
 #include <vector>
 
@@ -29,6 +30,17 @@ void View::showText(const std::string& text)
 	std::cout << text << std::endl;
 }
 
+void View::setPrendaMenuItem(const std::map<PrendaType, Prenda*>& items) {
+	if (items.empty())
+	{
+		showText("Ups!... parece que no hay prendas disponibles por aquí...");
+	}
+	else
+	{
+		m_prendaMenuItems = items;
+	}
+}
+
 //---------------> Menus
 void View::showMenuCotizacion() {
 	std::string optionString = "";
@@ -41,10 +53,71 @@ void View::showMenuCotizacion() {
 		showText("----------------------------------------------");
 		showText("PASO 1: Selecciona la prenda a cotizar: ");
 		m_presenter->getListOfPrendas();
+
+		for (const auto& item : m_prendaMenuItems)
+		{
+			const auto* prenda = m_prendaMenuItems[item.first];
+			std::string prendaName = prenda->getName();
+			auto numberOfItem = (int)item.first;
+			std::string  str_numberOfItem = std::to_string(numberOfItem);
+			std::string menuItem = str_numberOfItem + "- " + prendaName; // construímos el ítem/opción de menú (por ejemplo: "2- Rifle")
+			showText(menuItem.c_str());
+		}
+
+		std::cin >> optionString;
+		selectPrenda(optionString.c_str(), isValidOption);
+		std::cin.get();
 	
 	} while (!isValidOption);
 }
 
+void View::selectPrenda(const char* option, bool& isValidOption)
+{
+	try
+	{
+		int optionInt = std::stoi(option);
+		for (const auto& item : m_prendaMenuItems)
+		{
+			if (optionInt == (int)item.first)
+			{
+				m_presenter->pickupPrenda(optionInt);
+				isValidOption = true;
+				std::cin.get();
+				break;
+			}
+			else
+			{
+				isValidOption = false;
+			}
+		}
+		if (!isValidOption)
+		{
+			std::system("cls");
+			showText(INVALID_OPTION_MESSAGE);
+			std::cin.get();
+		}
+	}
+	catch (std::invalid_argument)
+	{
+		auto str_option = std::string(option);
+		if (str_option == "3")
+		{
+			isValidOption = true;
+			std::system("cls");
+			showText("Volveremos al menú principal.");
+			std::cin.get();
+		}
+		else
+		{
+			std::system("cls");
+			showText(INVALID_OPTION_MESSAGE);
+			isValidOption = false;
+		}
+	}
+
+	showText("");
+	showText(ANY_KEY_MESSAGE);
+}
 void View::showMainMenu()
 {
 	std::string option;
