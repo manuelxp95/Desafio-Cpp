@@ -17,6 +17,9 @@ public:
 	//void shoot();
 	//void seeCurrentWeapon();
 	//void dropCurrentWeapon();
+	virtual void setPrendaType(std::string op, std::string op2);
+	virtual void setPrendaType(std::string op) ;
+	void setCalidad(std::string op);
 	void getListOfPrendas();
 };
 #endif //PRESENTER_H

@@ -40,6 +40,9 @@
     <Filter Include="Domain\Prendas\Types\Pantalon">
       <UniqueIdentifier>{d1ab5031-2e4b-4717-b064-badccd26335b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Domain\Historial">
+      <UniqueIdentifier>{52f67d7b-6412-47a8-ab0b-25c0e68ea99d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">

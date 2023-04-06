@@ -42,6 +42,14 @@ void View::setPrendaMenuItem(const std::map<PrendaType, Prenda*>& items) {
 }
 
 //---------------> Menus
+void View::showHeadMenu() {
+	std::system("cls");
+	showText("COTIZADOR EXPRES - COTIZAR");
+	showText("----------------------------------------------");
+	showText("Presiona 3 para volver al menu principal");
+	showText("----------------------------------------------");
+}
+
 void View::showMenuCotizacion() {
 	std::string optionString = "";
 	bool isValidOption = true;
@@ -70,6 +78,60 @@ void View::showMenuCotizacion() {
 	
 	} while (!isValidOption);
 }
+
+void View::showSubmenuCamisa() {
+	std::string optionString = "";
+	std::string optionString2 = "";
+	bool isValidOption = true;
+	showHeadMenu();
+	showText("PASO 2.a: La camisa a cotizar, ¿Es Manga corta?");
+	showText("1) Si");
+	showText("2) No");
+	showText("----------------------------------------------");
+	std::cin >> optionString;
+	if (checkSelect(optionString.c_str())) {
+		showHeadMenu();
+		showText("PASO 2.a: La camisa a cotizar, ¿Es Cuello Mao?");
+		showText("1) Si");
+		showText("2) No");
+		showText("----------------------------------------------");
+		std::cin >> optionString2;
+		if (checkSelect(optionString2.c_str())){
+			m_presenter->setPrendaType(optionString, optionString2);
+		}
+		else { showMainMenu(); };
+	}
+	else {
+		showMainMenu();
+	};
+}
+
+void View::showCalidadMenu() {
+	std::string optionString = "";
+	showHeadMenu();
+	showText("PASO 3: Seleccione la calidad de la prenda");
+	showText("1) Standard");
+	showText("2) Premium");
+	showText("----------------------------------------------");
+	std::cin >> optionString;
+	if (checkSelect(optionString.c_str())) {
+		m_presenter->setCalidad(optionString);
+	}
+	else { showMainMenu();}
+};
+
+void View::showPrecioMenu() {
+	std::string optionString = "";
+	showHeadMenu();
+	showText("PASO 4: Ingrese el precio unitario de la prenda a cotizar");
+	showText("_");
+	showText("----------------------------------------------");
+	std::cin >> optionString;
+	if (checkSelect(optionString.c_str())) {
+		m_presenter->setCalidad(optionString);
+	}
+	else { showMainMenu(); }
+};
 
 void View::selectPrenda(const char* option, bool& isValidOption)
 {
@@ -118,6 +180,27 @@ void View::selectPrenda(const char* option, bool& isValidOption)
 	showText("");
 	showText(ANY_KEY_MESSAGE);
 }
+
+bool View::checkSelect(const char* option) {
+	auto str_option = std::string(option);
+	try {
+		if (str_option == "3")
+		{
+			std::system("cls");
+			showText("Volveremos al menú principal.");
+			std::cin.get();
+			return false;
+		}
+	}catch (const std::exception& e) {
+		std::cerr << "Error: " << e.what() << '\n';
+		return false;
+	}
+	showText("");
+	showText(ANY_KEY_MESSAGE);
+	return true;
+
+}
+
 void View::showMainMenu()
 {
 	std::string option;
