@@ -5,6 +5,7 @@
 #include <iomanip>
 #include <string>
 #include <vector>
+#include <sstream>
 
 class Vendedor;
 
@@ -18,11 +19,15 @@ private:
 	int cantidad;
 	double result;
 	std::shared_ptr<Vendedor> m_Vendedor;
+	std::string setFormato(double precioCotizacion);
 public:
-	const char* getCotizacion();
+	std::string getCotizacion();
 	const char* pickupPrenda(int option);
 	void setCamisaType(std::string op, std::string op2);
+	void setPantalonType(std::string op);
 	void setCalidad(std::string op);
+	void setPrecioUni(std::string optionString);
+	void setCantidadPrendas(std::string optionString);
 	void AddString(const std::string& str);
 };
 

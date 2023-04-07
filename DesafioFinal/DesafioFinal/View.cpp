@@ -41,7 +41,22 @@ void View::setPrendaMenuItem(const std::map<PrendaType, Prenda*>& items) {
 	}
 }
 
+void View::setHistorial(std::vector<std::string> historial) { //-------------->guardan en variables para presentacion
+
+}
+
 //---------------> Menus
+
+void View::showHistorialMenu() {
+	std::system("cls");
+	showText("COTIZADOR EXPRES - HISTORIAL DE COTIZACIONES");
+	showText("----------------------------------------------");
+	showText("Presiona 3 para volver al menu principal");
+	showText("----------------------------------------------");
+	m_presenter->getHistorialCotizaciones();
+};
+
+
 void View::showHeadMenu() {
 	std::system("cls");
 	showText("COTIZADOR EXPRES - COTIZAR");
@@ -78,6 +93,21 @@ void View::showMenuCotizacion() {
 	
 	} while (!isValidOption);
 }
+
+void View::showSubmenuPantalon() {
+	std::string optionString = "";
+	bool isValidOption = true;
+	showHeadMenu();
+	showText("PASO 2: El Pantalon a cotizar ¿Es Chupin?");
+	showText("1) Si");
+	showText("2) No");
+	showText("----------------------------------------------");
+	std::cin >> optionString;
+	if (checkSelect(optionString.c_str())) {
+		m_presenter->setPrendaType(optionString);
+	}
+	else { showMainMenu(); }
+};
 
 void View::showSubmenuCamisa() {
 	std::string optionString = "";
@@ -128,9 +158,37 @@ void View::showPrecioMenu() {
 	showText("----------------------------------------------");
 	std::cin >> optionString;
 	if (checkSelect(optionString.c_str())) {
-		m_presenter->setCalidad(optionString);
+		m_presenter->setPrecioUni(optionString);
 	}
 	else { showMainMenu(); }
+};
+
+void View::showCantidadMenu() {
+	std::string optionString = "";
+	showHeadMenu();
+	showText("INFORMACION:");
+	showText("EXISTE x CANTIDAD DE UNIDADES EN STOCK DE LA PRENDA SELECCIONADA");
+	showText("");
+	showText("PASO 5: Ingrese la cantidad de unidades a cotizar");
+	showText("_");
+	showText("----------------------------------------------");
+	std::cin >> optionString;
+	if (checkSelect(optionString.c_str())) {
+		m_presenter->setCantidadPrendas(optionString);
+	}
+	else { showMainMenu(); }
+};
+
+void View::showResultCotizacion(std::string text) {
+	std::string optionString = "";
+	showHeadMenu();
+	showText(text);
+	std::cin >> optionString;
+	if (checkSelect(optionString.c_str())) {
+		m_presenter->setCantidadPrendas(optionString);
+	}
+	else { showMainMenu(); }
+
 };
 
 void View::selectPrenda(const char* option, bool& isValidOption)
@@ -236,13 +294,13 @@ void View::runOption(const char* option, bool& exitCondition)
 
 	if (str_option == "1")
 	{
+		showHistorialMenu();
 		//showMenuToTakeAWeapon();
 		exitCondition = false;
 	}
 	else if (str_option == "2")
 	{
 		showMenuCotizacion();
-		//m_presenter->dropCurrentWeapon();
 		std::cin.get();
 		exitCondition = false;
 	}

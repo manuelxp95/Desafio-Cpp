@@ -69,6 +69,9 @@
     <ClCompile Include="Pantalon.cpp">
       <Filter>Domain\Prendas\Types\Pantalon</Filter>
     </ClCompile>
+    <ClCompile Include="Historial.cpp">
+      <Filter>Domain\Historial</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IView.h">
@@ -94,6 +97,9 @@
     </ClInclude>
     <ClInclude Include="Pantalon.h">
       <Filter>Domain\Prendas\Types\Pantalon</Filter>
+    </ClInclude>
+    <ClInclude Include="Historial.h">
+      <Filter>Domain\Historial</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

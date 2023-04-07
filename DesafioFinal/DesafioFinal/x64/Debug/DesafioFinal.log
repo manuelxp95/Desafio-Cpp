@@ -1,5 +1,11 @@
-﻿  Cotizador.cpp
+﻿  Camisa.cpp
+  Cotizador.cpp
+  Main.cpp
+  Pantalon.cpp
+  Prenda.cpp
+  PrendaFactory.cpp
+  Presenter.cpp
   View.cpp
   Generando código...
-C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\Cotizador.cpp(19): warning C4715: 'Cotizador::pickupPrenda': no todas las rutas de acceso de control devuelven un valor
+C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\Cotizador.cpp(55): warning C4715: 'Cotizador::pickupPrenda': no todas las rutas de acceso de control devuelven un valor
   DesafioFinal.vcxproj -> C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\x64\Debug\DesafioFinal.exe

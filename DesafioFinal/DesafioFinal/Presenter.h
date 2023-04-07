@@ -1,25 +1,27 @@
 #ifndef PRESENTER_H
 #define PRESENTER_H
+#include <string>
 
 class IView;
 class Cotizador;
+class Historial;
 
 class Presenter
 {
 private:
 	IView* m_view = nullptr;
 	Cotizador* m_cotizador = nullptr;
+	Historial* m_historial = nullptr;
 public:
 	explicit Presenter(IView* view);
 	//~Presenter();
 	void pickupPrenda(int option);
-	//void getListOfWeaponMenuItems();
-	//void shoot();
-	//void seeCurrentWeapon();
-	//void dropCurrentWeapon();
 	virtual void setPrendaType(std::string op, std::string op2);
-	virtual void setPrendaType(std::string op) ;
+	virtual void setPrendaType(std::string op);
+	void getHistorialCotizaciones();
 	void setCalidad(std::string op);
+	void setPrecioUni(std::string op);
+	void setCantidadPrendas(std::string optionString);
 	void getListOfPrendas();
 };
 #endif //PRESENTER_H
