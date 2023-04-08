@@ -135,6 +135,8 @@
     <ClCompile Include="Prenda.cpp" />
     <ClCompile Include="PrendaFactory.cpp" />
     <ClCompile Include="Presenter.cpp" />
+    <ClCompile Include="Tienda.cpp" />
+    <ClCompile Include="Vendedor.cpp" />
     <ClCompile Include="View.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -146,6 +148,8 @@
     <ClInclude Include="Prenda.h" />
     <ClInclude Include="PrendaFactory.h" />
     <ClInclude Include="Presenter.h" />
+    <ClInclude Include="Tienda.h" />
+    <ClInclude Include="Vendedor.h" />
     <ClInclude Include="View.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

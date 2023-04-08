@@ -7,7 +7,7 @@ void Cotizador::AddString(const std::string& str) {
 	prendaList.push_back(str);
 }
 
-std::string Cotizador::getCotizacion() {
+std::string Cotizador::getCotizacion(int cod_vendedor) {
 	double precioPrenda= std::stod(prendaList[3]);
 	for (auto item : prendaList) {
 		if (item == "MANGAS_CORTAS") {
@@ -23,10 +23,11 @@ std::string Cotizador::getCotizacion() {
 			precioPrenda = precioPrenda + precioPrenda * 0.3; //R6
 		}
 	}
-	return (setFormato(precioPrenda));
+	return (setFormato(precioPrenda,cod_vendedor));
 }
 
-std::string Cotizador::setFormato(double precioCotizacion) {
+std::string Cotizador::setFormato(double precioCotizacion, int cod_vend) {
+	id++;
 	std::ostringstream stream;
 	fechaHora fh;
 	fh.momento = std::chrono::system_clock::now();
@@ -34,7 +35,7 @@ std::string Cotizador::setFormato(double precioCotizacion) {
 
 	stream << "Número de identificación: " << id << "\n";
 	stream << "Fecha y Hora de la cotización: " << std::ctime(&tiempo) << "\n";
-	stream << "Código del Vendedor: " << "001" << "\n"; //-------->id vendedor
+	stream << "Código del Vendedor: " << cod_vend << "\n"; //-------->id vendedor
 	stream << "Prenda cotizada: " << prendaSelected->getName() << " - ";
 	stream << prendaList[0] <<" - " << prendaList[1] <<" - " << prendaList[2] << "\n";
 	stream << "Precio unitario: $" << prendaList[3] << "\n";
@@ -46,6 +47,7 @@ std::string Cotizador::setFormato(double precioCotizacion) {
 const char* Cotizador::pickupPrenda(int option) {
 
 	prendaSelected = Prenda::pickup(option);
+	prendaList.clear();
 	
 	if (prendaSelected->getName() == "Camisa") {
 		return "Camisa";//-----------> Comportamiento de menu camisa
@@ -98,3 +100,7 @@ void Cotizador::setPrecioUni(std::string optionString) {
 void Cotizador::setCantidadPrendas(std::string optionString) {
 	AddString(optionString);
 }
+
+std::vector<std::string> Cotizador::getPrendaActual() {
+	return prendaList;
+};

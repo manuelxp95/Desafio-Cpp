@@ -1,11 +1,13 @@
-﻿  Camisa.cpp
-  Cotizador.cpp
+﻿  Cotizador.cpp
   Main.cpp
-  Pantalon.cpp
-  Prenda.cpp
-  PrendaFactory.cpp
   Presenter.cpp
+C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\Tienda.h(7,15): warning C4099: 'Camisa': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
+C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\Tienda.h(7,8): message : vea la declaración de 'Camisa'
+C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\Tienda.h(36,17): warning C4099: 'Pantalon': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
+C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\Tienda.h(36,8): message : vea la declaración de 'Pantalon'
+  Tienda.cpp
   View.cpp
   Generando código...
-C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\Cotizador.cpp(55): warning C4715: 'Cotizador::pickupPrenda': no todas las rutas de acceso de control devuelven un valor
+C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\Tienda.cpp(80): warning C4715: 'Tienda::getStock': no todas las rutas de acceso de control devuelven un valor
+C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\Cotizador.cpp(57): warning C4715: 'Cotizador::pickupPrenda': no todas las rutas de acceso de control devuelven un valor
   DesafioFinal.vcxproj -> C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\x64\Debug\DesafioFinal.exe

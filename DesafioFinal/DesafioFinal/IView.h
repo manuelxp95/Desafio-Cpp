@@ -16,10 +16,11 @@ public:
 	virtual void showSubmenuCamisa() = 0;
 	virtual void showSubmenuPantalon()=0;
 	virtual void showCalidadMenu() = 0;
-	virtual void showCantidadMenu() = 0;
+	virtual void showCantidadMenu(int stockActual) = 0;
 	virtual void showPrecioMenu()=0;
 	virtual void showResultCotizacion(std::string text) = 0;
 	virtual void setPrendaMenuItem(const std::map<PrendaType, Prenda*>& items) = 0;
 	virtual void setHistorial(std::vector<std::string> historial) = 0;
+	virtual void setLogin(std::string t_nom, std::string t_dir, std::string v_nom,int id_v)=0;
 };
 #endif // IVIEW_H

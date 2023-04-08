@@ -3,9 +3,16 @@
 #include "Cotizador.h"
 #include "Prenda.h"
 #include "Historial.h"
+#include "Vendedor.h"
+#include "Tienda.h"
 
-Presenter::Presenter(IView* view) : m_view(view), m_cotizador(new Cotizador()), m_historial(new Historial())
-{
+Presenter::Presenter(IView* view){
+	m_view=view; 
+	m_cotizador = new Cotizador(); 
+	m_historial = new Historial();
+	m_vendedor = new Vendedor();
+	m_tienda = new Tienda();
+	m_view->setLogin(m_tienda->getNombre(),m_tienda->getDireccion(), m_vendedor->getNombreyApellido(), m_vendedor->getCodigo());
 }
 
 void Presenter::getListOfPrendas() {
@@ -45,12 +52,14 @@ void Presenter::setCalidad(std::string optionString) {
 
 void Presenter::setPrecioUni(std::string optionString) {
 	m_cotizador->setPrecioUni(optionString);
-	m_view->showCantidadMenu();//----------->if->Cantidad de stock disponible
+	auto prendaActual = m_cotizador->getPrendaActual();
+	int stockActual = m_tienda->getStock(prendaActual);
+	m_view->showCantidadMenu(stockActual);//----------->if->Cantidad de stock disponible
 }
 
 void Presenter::setCantidadPrendas(std::string optionString) {
 	m_cotizador->setCantidadPrendas(optionString);
-	std::string resultCotizacion = m_cotizador->getCotizacion();
+	std::string resultCotizacion = m_cotizador->getCotizacion(m_vendedor->getCodigo());
 	m_historial->setHistorial(resultCotizacion);
 	m_view->showResultCotizacion(resultCotizacion);
 }

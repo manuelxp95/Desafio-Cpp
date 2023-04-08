@@ -42,10 +42,17 @@ void View::setPrendaMenuItem(const std::map<PrendaType, Prenda*>& items) {
 }
 
 void View::setHistorial(std::vector<std::string> historial) { //-------------->guardan en variables para presentacion
-
+	historialActual = historial;
 }
 
-//---------------> Menus
+void View::setLogin(std::string t_nom, std::string t_dir, std::string v_nom, int id_v) {
+	tienda_nom = t_nom;
+	tienda_dir = t_dir;
+	vend_nom = v_nom;
+	cod_vend = id_v;
+}
+
+//-----------------------> Menus
 
 void View::showHistorialMenu() {
 	std::system("cls");
@@ -54,8 +61,12 @@ void View::showHistorialMenu() {
 	showText("Presiona 3 para volver al menu principal");
 	showText("----------------------------------------------");
 	m_presenter->getHistorialCotizaciones();
+	for (auto item : historialActual) {
+		showText(item);
+		showText("\n");
+	}
+	std::cin.get();
 };
-
 
 void View::showHeadMenu() {
 	std::system("cls");
@@ -121,7 +132,7 @@ void View::showSubmenuCamisa() {
 	std::cin >> optionString;
 	if (checkSelect(optionString.c_str())) {
 		showHeadMenu();
-		showText("PASO 2.a: La camisa a cotizar, ¿Es Cuello Mao?");
+		showText("PASO 2.b: La camisa a cotizar, ¿Es Cuello Mao?");
 		showText("1) Si");
 		showText("2) No");
 		showText("----------------------------------------------");
@@ -163,20 +174,31 @@ void View::showPrecioMenu() {
 	else { showMainMenu(); }
 };
 
-void View::showCantidadMenu() {
+void View::showCantidadMenu(int stockActual) {
 	std::string optionString = "";
 	showHeadMenu();
 	showText("INFORMACION:");
-	showText("EXISTE x CANTIDAD DE UNIDADES EN STOCK DE LA PRENDA SELECCIONADA");
+	showText("EXISTE "+std::to_string(stockActual) + " CANTIDAD DE UNIDADES EN STOCK DE LA PRENDA SELECCIONADA");
 	showText("");
 	showText("PASO 5: Ingrese la cantidad de unidades a cotizar");
 	showText("_");
 	showText("----------------------------------------------");
 	std::cin >> optionString;
-	if (checkSelect(optionString.c_str())) {
-		m_presenter->setCantidadPrendas(optionString);
+	//-------------->Control antes de seguir
+	if (std::stoi(optionString) > stockActual) {
+		showHeadMenu();
+		showText("");
+		showText("ERROR: CANTIDAD DE STOCK INSUFICIENTE");
+		showText("----------------------------------------------");
+		std::cin.get();
+		showMainMenu();
 	}
-	else { showMainMenu(); }
+	else {
+		if (checkSelect(optionString.c_str())) {
+			m_presenter->setCantidadPrendas(optionString);
+		}
+		else { showMainMenu(); }
+	}
 };
 
 void View::showResultCotizacion(std::string text) {
@@ -269,9 +291,9 @@ void View::showMainMenu()
 		std::system("cls");
 		showText("COTIZADOR EXPRESS MENÚ PRINCIPAL");
 		showText("----------------------------------------------");
-		showText("Nombre de la tienda | Dirección de la tienda");
+		showText(tienda_nom + " | " + tienda_dir);
 		showText("----------------------------------------------");
-		showText("Nombre y Apellido del vendedor | Código del vendedor");
+		showText(vend_nom + " | " + std::to_string(cod_vend));
 		showText("----------------------------------------------");
 		showText("");
 		showText("SELECCIONE UNA OPCIÓN DEL MENÚ:");

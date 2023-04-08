@@ -19,9 +19,10 @@ private:
 	int cantidad;
 	double result;
 	std::shared_ptr<Vendedor> m_Vendedor;
-	std::string setFormato(double precioCotizacion);
+	std::string setFormato(double precioCotizacion, int cod_vendedor);
 public:
-	std::string getCotizacion();
+	std::string getCotizacion(int cod_vendedor);
+	std::vector<std::string> getPrendaActual();
 	const char* pickupPrenda(int option);
 	void setCamisaType(std::string op, std::string op2);
 	void setPantalonType(std::string op);

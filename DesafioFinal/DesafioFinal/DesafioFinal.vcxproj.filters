@@ -43,6 +43,12 @@
     <Filter Include="Domain\Historial">
       <UniqueIdentifier>{52f67d7b-6412-47a8-ab0b-25c0e68ea99d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Domain\Vendedor">
+      <UniqueIdentifier>{cbd40cff-f671-4de9-8b40-a79a47adffe7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain\Tienda">
+      <UniqueIdentifier>{d348efaa-49c8-49ff-99f6-54cb9e19370f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -72,6 +78,12 @@
     <ClCompile Include="Historial.cpp">
       <Filter>Domain\Historial</Filter>
     </ClCompile>
+    <ClCompile Include="Vendedor.cpp">
+      <Filter>Domain\Vendedor</Filter>
+    </ClCompile>
+    <ClCompile Include="Tienda.cpp">
+      <Filter>Domain\Tienda</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IView.h">
@@ -100,6 +112,12 @@
     </ClInclude>
     <ClInclude Include="Historial.h">
       <Filter>Domain\Historial</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendedor.h">
+      <Filter>Domain\Vendedor</Filter>
+    </ClInclude>
+    <ClInclude Include="Tienda.h">
+      <Filter>Domain\Tienda</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
