@@ -68,7 +68,7 @@ void Cotizador::setPantalonType(std::string op) {
 };
 
 void Cotizador::setCamisaType(std::string op, std::string op2) {
-	//if (Tienda::getPrendas().count > 0) {
+	
 	if (op == "1") {//------->camisa corta?
 		AddString("MANGAS_CORTAS");
 	}
@@ -81,7 +81,6 @@ void Cotizador::setCamisaType(std::string op, std::string op2) {
 	else {
 		AddString("SIN_CUELLO_MAO");
 	}
-//	}
 };
 
 void Cotizador::setCalidad(std::string op) {

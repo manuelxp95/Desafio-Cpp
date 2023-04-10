@@ -1,0 +1,22 @@
+﻿  Camisa.cpp
+  Cotizador.cpp
+  Historial.cpp
+  Main.cpp
+  Pantalon.cpp
+  Prenda.cpp
+  PrendaFactory.cpp
+  Presenter.cpp
+C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\Tienda.h(7,15): warning C4099: 'Camisa': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
+C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\Tienda.h(7,8): message : vea la declaración de 'Camisa'
+C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\Tienda.h(36,17): warning C4099: 'Pantalon': nombre de tipo visto anteriormente usando 'class' ahora se ve usando 'struct'
+C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\Tienda.h(36,8): message : vea la declaración de 'Pantalon'
+  Tienda.cpp
+  Vendedor.cpp
+  View.cpp
+  Generando código
+  Previous IPDB not found, fall back to full compilation.
+C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\Tienda.cpp(80): warning C4715: 'Tienda::getStock': no todas las rutas de acceso de control devuelven un valor
+C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\Cotizador.cpp(57): warning C4715: 'Cotizador::pickupPrenda': no todas las rutas de acceso de control devuelven un valor
+C:\Users\manue\OneDrive\Documentos\GitHub\DesafioC++\Desafio-Cpp\DesafioFinal\DesafioFinal\Presenter.cpp(28): error C4703: posiblemente se utilizó la variable de puntero local 'behaviour' sin inicializar
+  All 494 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+LINK : fatal error LNK1257: error de generación de código

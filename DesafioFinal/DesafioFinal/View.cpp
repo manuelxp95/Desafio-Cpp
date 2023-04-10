@@ -191,6 +191,7 @@ void View::showCantidadMenu(int stockActual) {
 		showText("ERROR: CANTIDAD DE STOCK INSUFICIENTE");
 		showText("----------------------------------------------");
 		std::cin.get();
+		std::cin.get();
 		showMainMenu();
 	}
 	else {
@@ -317,7 +318,6 @@ void View::runOption(const char* option, bool& exitCondition)
 	if (str_option == "1")
 	{
 		showHistorialMenu();
-		//showMenuToTakeAWeapon();
 		exitCondition = false;
 	}
 	else if (str_option == "2")
