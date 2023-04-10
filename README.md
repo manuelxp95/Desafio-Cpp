@@ -3,7 +3,7 @@
 Bienvenido al programa de cotización de precios de prendas. Este programa ha sido diseñado para ayudar a los usuarios a obtener precios precisos y actualizados de prendas según su tipo, de manera rápida y sencilla.
 
 Para este escenario se planteo el siguiente diagrama UML:
-![UML](https://i.stack.imgur.com/VjogY.png)
+![UML](https://github.com/manuelxp95/Desafio-Cpp/blob/main/DesafioFinal/DesafioFinal/UML-fINAL.png)
 
 
 ## Instrucciones
