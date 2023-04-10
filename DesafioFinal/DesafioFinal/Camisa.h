@@ -20,6 +20,5 @@ private:
 public:
 	Camisa();
 	void setCamisaTipo(tipoManga tipo_M,tipoCuello tipo_C);
-	//const char* shoot() override;
 };
-#endif //REVOLVER_H
+#endif

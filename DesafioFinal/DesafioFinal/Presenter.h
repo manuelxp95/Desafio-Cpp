@@ -19,7 +19,6 @@ private:
 	Vendedor* m_vendedor = nullptr;
 public:
 	explicit Presenter(IView* view);
-	//~Presenter();
 	void pickupPrenda(int option);
 	virtual void setPrendaType(std::string op, std::string op2);
 	virtual void setPrendaType(std::string op);

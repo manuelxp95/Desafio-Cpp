@@ -10,8 +10,6 @@ class Prenda
 	friend class Pantalon;
 
 public:
-	//virtual const char* shoot() = 0;
-	//virtual ~Weapon() = default;
 	static Prenda* pickup(int weaponSelected);
 	static std::map<PrendaType, Prenda*> getConstants();
 	const char* getName() const;
